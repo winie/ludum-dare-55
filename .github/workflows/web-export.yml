@@ -4,6 +4,7 @@ jobs:
   web-export:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: wget https://github.com/godotengine/godot/releases/download/4.2.1-stable/Godot_v4.2.1-stable_linux.x86_64.zip
       - run: unzip Godot_v4.2.1-stable_linux.x86_64.zip
       - run: mkdir -p ./build/web/
